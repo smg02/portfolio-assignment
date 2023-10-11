@@ -8,10 +8,20 @@
 body {
     background-color: black;
 }
-.head  {
+.head {
     text-align: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.65), transparent);
-    padding: 10px 10px;
+    padding: 20px 0 10px 0;
+    background-color: rgb(252, 238, 10);
+}
+.head h1{
+    color: black;
+}
+
+.yimage {
+    transform: rotate(180deg);
+    width:100%;
+    height: 100%;
+    margin-bottom: 10rem;
 }
 a {
     text-decoration: none;
@@ -25,11 +35,12 @@ a {
     left: 0;
     display: flex;
     justify-content: center;
+    margin-bottom: 10px;
 }
 
 .tab {
     text-decoration: none;
-    color: antiquewhite !important;
+    color: antiquewhite;
     font-weight: 600;
     margin: 5px;
     padding: 10px 15px;
@@ -39,8 +50,12 @@ a {
     border: 1px solid ;
     border-color: rgb(252, 238, 10);
 }
-.active{
-    background-color: rgb(255, 255, 255);
+.active {
+    background-color: black;
+    border: 1px solid #00f0ff;
+}
+.active a{
+    color: white;
 }
 
 .bold {
@@ -57,10 +72,44 @@ a {
 .content {
     margin: 0 20% 0 20%;
 }
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+.photo {
+    width: 250px;
+    margin-left: 30%;
+    margin-top: -100px;
+    height: fit-content;
+}
+@media only screen and (max-width: 768px) { 
+     /** .photo {
+      width: 50%;
+        display: block;
+        position: relative;
+        margin-top: -180px;
+        right: 110%;
+        margin-bottom: 100px;
+    }**/
+    .flex {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 120px;
+        justify-content: left;
+    }
+    .flex .photo {
+        margin-left: 0%;
+        width: 70px;
+    }
+    .yimage {
+        margin-bottom: 15%;
+    }
+}
+.wrap,
 .typewrite {
     font-weight: 500;
     font-size: 40px;
-    margin-top: 60px;
+    margin: 30px 0 20px 0;
 }
 .separator-big {
     width: 100%;
@@ -77,11 +126,132 @@ a {
     font-weight: 600;
     border-bottom: 1px solid rgb(252, 238, 10);
 }
-.gitlogo {
+.logo {
     width: 35px;
-    padding: 15px 0 0 0;
+    margin: 30px 10px 50% 10px;
 }
 .content p{
-    margin-top: 30px;
+    font-size: 1.5rem;
 }
+br {
+    margin-top: 1rem;
+    display: block;
+}
+.content.about {
+    margin-bottom: 50%;
+}
+.edu {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+h3 {
+    font-size: 2rem;
+}
+.edu.last {
+    margin-bottom: 10rem;
+}
+/**
+.form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20% 0 20%;
+}
+.form > input {
+    background-color: #f1f1f1;
+    color: black;
+    margin: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+.formback {
+    background-color: white;
 
+}**/
+p span{
+    color: yellow;
+}
+.loader {
+    position: relative;
+    width: 80px;
+    margin: 50px auto;
+    margin-bottom: 100rem;
+  }
+  
+  .duo {
+    height: 20px;
+    width: 50px;
+    background: hsla(0, 0%, 0%, 0.0);
+    position: absolute;
+    
+  }
+  
+  .duo, .dot {
+    animation-duration: 1.3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  
+  .duo1 {
+    left: 0;
+  }
+  
+  .duo2 {
+    left: 30px
+  }
+  
+  
+  .dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background: #00f0ff;
+    position: absolute;
+  }
+  
+  .dot-a {
+    left: 0px;  
+  }
+  
+  .dot-b {
+    right: 0px;
+  }
+  
+  
+  @keyframes spin {
+      0% { transform: rotate(0deg) }
+     50% { transform: rotate(180deg) }
+    100% { transform: rotate(180deg) }
+  }
+  
+  @keyframes onOff {
+      0% { opacity: 0; }
+     49% { opacity: 0; }
+     50% { opacity: 1; }
+    100% { opacity: 1; }
+  }
+  
+  .duo1 {
+    animation-name: spin;
+  }
+  
+  .duo2 {
+    animation-name: spin;
+    animation-direction: reverse;
+  }
+  
+  .duo2 .dot-b {
+    animation-name: onOff;
+  }
+  
+  .duo1 .dot-a {
+    opacity: 0;
+    animation-name: onOff;
+    animation-direction: reverse;
+  }
+
+.content.duo2 {
+    margin-bottom: 100%;
+}
+.con {
+    margin-bottom: 2rem;
+}
