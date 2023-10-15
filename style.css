@@ -21,7 +21,7 @@ body {
     transform: rotate(180deg);
     width:100%;
     height: 100%;
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
 }
 a {
     text-decoration: none;
@@ -70,7 +70,7 @@ a {
     font-size: 40px;
 }
 .content {
-    margin: 0 20% 0 20%;
+    margin: 0 10% 0 10%;
 }
 .flex {
     display: flex;
@@ -82,29 +82,12 @@ a {
     margin-top: -100px;
     height: fit-content;
 }
-@media only screen and (max-width: 768px) { 
-     /** .photo {
-      width: 50%;
-        display: block;
-        position: relative;
-        margin-top: -180px;
-        right: 110%;
-        margin-bottom: 100px;
-    }**/
-    .flex {
-        display: flex;
-        flex-direction: column-reverse;
-        margin-top: 120px;
-        justify-content: left;
-    }
-    .flex .photo {
-        margin-left: 0%;
-        width: 70px;
-    }
-    .yimage {
-        margin-bottom: 15%;
-    }
+.skills-image {
+    margin-top: 10px;
+    width: 400px;
 }
+
+
 .wrap,
 .typewrite {
     font-weight: 500;
@@ -128,7 +111,7 @@ a {
 }
 .logo {
     width: 35px;
-    margin: 30px 10px 50% 10px;
+    margin: 30px 10px 30% 10px;
 }
 .content p{
     font-size: 1.5rem;
@@ -138,18 +121,74 @@ br {
     display: block;
 }
 .content.about {
-    margin-bottom: 50%;
+    margin-bottom: 30%;
 }
 .edu {
     margin-bottom: 2rem;
-    text-align: center;
+    /**text-align: center;**/
 }
 h3 {
+    color: #00f0ff;
     font-size: 2rem;
+    margin-bottom: 10px;
+    position: relative;
 }
-.edu.last {
-    margin-bottom: 10rem;
+h3 {
+    content: "";
+    border-bottom: 2px solid yellow;
+    width: fit-content;
 }
+.con {
+    text-align: center;
+}
+.uil {
+    font-size: 50px;
+    padding: 15px;
+    color: #fb2121;
+}
+.project {
+    margin-bottom: 100px;
+}
+.pro-head{
+    color: #fb2121;
+    display: inline;
+    margin-bottom: 50px;
+}
+li {
+    list-style-type: circle;
+    padding: 2px;
+    font-size: 1.5rem;
+}
+.con .logo {
+    margin: 0;
+    font-size: 50px;
+    padding: 20px;
+}
+
+@media only screen and (max-width: 768px) { 
+    .photo {
+        display: none;
+    }
+    .flex {
+        display: flex;
+        justify-content: left;
+        flex: 1;
+    }
+    .flex .photo {
+        margin-left: 0%;
+        
+        flex: 2;
+    }
+    .yimage {
+        margin-bottom: 15%;
+    }
+    .skills-image {
+        width: 300px;
+    }
+}
+
+
+
 /**
 .form {
     display: flex;
